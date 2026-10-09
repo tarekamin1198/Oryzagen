@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OryzaGen: an integrative computational framework for prioritizing rice salinity-tolerance candidate genes.">
+  <title>OryzaGen | Rice Salinity Gene Prioritization</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="OryzaGen home"><span class="brand-mark">O</span><span>OryzaGen</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#evidence">Evidence</a><a href="#models">Models</a><a href="#candidates">Candidates</a><a href="#downloads">Downloads</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Rice salinity tolerance · computational prototype</p>
+        <h1>From stress response to candidate genes.</h1>
+        <p class="lede">OryzaGen integrates salinity-responsive expression, published GWAS loci, and population-blocked machine learning to prioritize genes for follow-up in <em>Oryza sativa</em>.</p>
+        <div class="hero-actions"><a class="button primary" href="#candidates">Explore candidates</a><a class="button secondary" href="#method">Read the method</a></div>
+      </div>
+      <div class="hero-panel" aria-label="Pipeline summary">
+        <div class="panel-label">Evidence flow</div>
+        <div class="flow"><span>Expression</span><b>+</b><span>GWAS</span><b>+</b><span>ML</span><i>→</i><strong>Prioritized genes</strong></div>
+        <p>Evidence is combined transparently; the dashboard does not claim experimental validation.</p>
+      </div>
+    </section>
+
+    <section class="metrics wrap" aria-label="Project summary metrics">
+      <div><strong>478</strong><span>matched accessions</span></div><div><strong>28</strong><span>expression-GWAS overlaps</span></div><div><strong>293</strong><span>extreme-class ML samples</span></div><div><strong>0.584</strong><span>best blocked ROC-AUC</span></div>
+    </section>
+
+    <section id="evidence" class="section wrap"><div class="section-heading"><p class="eyebrow">01 · Evidence</p><h2>Three complementary signals</h2><p>The strongest result is convergence: genes that respond to salinity and lie near independently published salinity GWAS loci receive higher priority.</p></div>
+      <div class="evidence-grid"><article><div class="number">01</div><h3>Transcriptomic response</h3><p>Expression changes provide the biological response layer. Candidates are ranked by effect size and expression evidence.</p></article><article><div class="number">02</div><h3>Published GWAS support</h3><p>A ±100 kb window links ranked expression candidates to published salinity-associated SNP coordinates.</p></article><article><div class="number">03</div><h3>Genomic prediction</h3><p>CatBoost and other models provide a secondary SNP-neighborhood signal under population-blocked validation.</p></article></div>
+      <figure class="wide-figure"><img src="figures/expression_gwas_overlap_top_candidates.svg" alt="Top expression candidates with published GWAS overlap"><figcaption>Expression candidates with nearby published salinity GWAS support.</figcaption></figure>
+    </section>
+
+    <section id="models" class="section dark"><div class="wrap"><div class="section-heading"><p class="eyebrow">02 · Models</p><h2>Predictive performance is reported honestly</h2><p>The models are useful as prioritization support, not as a finished field-ready predictor. The population-blocked CatBoost model reached ROC-AUC 0.584.</p></div>
+      <div class="model-layout"><figure><img src="figures/salinity_all_models_population_blocked_roc_auc.svg" alt="Population-blocked ROC-AUC comparison across models"><figcaption>Population-blocked comparison across the tested models.</figcaption></figure><div class="model-note"><div class="score">0.584</div><h3>CatBoost blocked ROC-AUC</h3><p>Performance is modest and should be interpreted alongside the transcriptomic and published-GWAS evidence.</p><a class="text-link" href="#downloads">Download metrics →</a></div></div>
+    </div></section>
+
+    <section id="candidates" class="section wrap"><div class="section-heading"><p class="eyebrow">03 · Candidate genes</p><h2>Priority list for biological follow-up</h2><p>These are computational candidates, not confirmed salt-tolerance genes. Use the downloadable table for the complete ranked output.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Gene / identifier</th><th>Chr.</th><th>Expression change</th><th>Published GWAS</th><th>Evidence score</th></tr></thead><tbody id="candidate-rows"></tbody></table></div>
+    </section>
+
+    <section id="method" class="section method-band"><div class="wrap method-grid"><div><p class="eyebrow">Method note</p><h2>Designed for transparent prioritization</h2></div><p>Objective 1 ranks salinity-responsive expression features. Objective 2 integrates published salinity GWAS coordinates with a ±100 kb window. Objective 3 evaluates baseline, regularized logistic regression, random forest, XGBoost, LightGBM, and CatBoost models using population-blocked validation where possible.</p></div></section>
+
+    <section id="downloads" class="section wrap"><div class="section-heading"><p class="eyebrow">Downloads</p><h2>Project outputs</h2><p>Small, reviewable outputs are provided for readers. Raw genotype files are intentionally not bundled into this public page.</p></div><div class="download-grid"><a href="downloads/final_salinity_candidate_gene_priority.csv" download><span>CSV</span><strong>Final candidate-gene priority table</strong><small>Ranked expression, GWAS, and ML evidence</small></a><a href="downloads/salinity_boosting_model_metrics.csv" download><span>CSV</span><strong>Model metrics</strong><small>Blocked and stratified validation results</small></a><a href="downloads/REVISED_SALINITY_PIPELINE_REPORT.md" download><span>MD</span><strong>Pipeline report</strong><small>Methods, counts, and interpretation</small></a></div></section>
+  </main>
+  <footer><div class="wrap"><span>OryzaGen</span><span>Integrative rice salinity-tolerance analysis</span><span>Research prototype · in silico evidence</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
