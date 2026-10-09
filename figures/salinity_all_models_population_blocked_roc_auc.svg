@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="460.0" y="34" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">All Salinity ML Models</text>
+<text x="460.0" y="492" text-anchor="middle" font-family="Arial" font-size="14">Population-blocked ROC-AUC</text>
+<text transform="translate(24 260.0) rotate(-90)" text-anchor="middle" font-family="Arial" font-size="14">Model</text>
+<text x="170" y="104.58333333333334" text-anchor="end" font-family="Arial" font-size="12">prevalence_baseline</text>
+<rect x="180" y="81.24166666666667" width="280.2124685490635" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="467.2124685490635" y="104.58333333333334" font-family="Arial" font-size="12">0.418</text>
+<text x="170" y="163.75" text-anchor="end" font-family="Arial" font-size="12">xgboost</text>
+<rect x="180" y="140.40833333333333" width="362.7527723418134" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="549.7527723418134" y="163.75" font-family="Arial" font-size="12">0.541</text>
+<text x="170" y="222.91666666666666" text-anchor="end" font-family="Arial" font-size="12">random_forest</text>
+<rect x="180" y="199.575" width="374.1473301649427" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="561.1473301649427" y="222.91666666666666" font-family="Arial" font-size="12">0.558</text>
+<text x="170" y="282.0833333333333" text-anchor="end" font-family="Arial" font-size="12">lightgbm</text>
+<rect x="180" y="258.7416666666667" width="374.8497344143137" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="561.8497344143136" y="282.0833333333333" font-family="Arial" font-size="12">0.559</text>
+<text x="170" y="341.24999999999994" text-anchor="end" font-family="Arial" font-size="12">regularized_logistic_regression</text>
+<rect x="180" y="317.9083333333333" width="388.2578510856398" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="575.2578510856398" y="341.24999999999994" font-family="Arial" font-size="12">0.579</text>
+<text x="170" y="400.41666666666663" text-anchor="end" font-family="Arial" font-size="12">catboost</text>
+<rect x="180" y="377.075" width="391.41086571614943" height="36.68333333333333" fill="#5b6f9f"/>
+<text x="578.4108657161494" y="400.41666666666663" font-family="Arial" font-size="12">0.584</text>
+</svg>

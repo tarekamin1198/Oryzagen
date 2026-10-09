@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="680" viewBox="0 0 920 680">
+<rect width="100%" height="100%" fill="white"/>
+<text x="460.0" y="34" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">Expression Candidates Near Published Salinity GWAS Hits</text>
+<text x="460.0" y="652" text-anchor="middle" font-family="Arial" font-size="14">Absolute log2 fold-change</text>
+<text transform="translate(24 340.0) rotate(-90)" text-anchor="middle" font-family="Arial" font-size="14">Candidate</text>
+<text x="210" y="89.30555555555556" text-anchor="end" font-family="Arial" font-size="12">LOC4352120</text>
+<rect x="220" y="75.43611111111112" width="289.2647721606658" height="17.738888888888887" fill="#3f7d78"/>
+<text x="516.2647721606659" y="89.30555555555556" font-family="Arial" font-size="12">1.258</text>
+<text x="210" y="117.91666666666667" text-anchor="end" font-family="Arial" font-size="12">LOC4335529</text>
+<rect x="220" y="104.04722222222223" width="334.4372600671553" height="17.738888888888887" fill="#3f7d78"/>
+<text x="561.4372600671553" y="117.91666666666667" font-family="Arial" font-size="12">1.455</text>
+<text x="210" y="146.52777777777777" text-anchor="end" font-family="Arial" font-size="12">Os11g0533400</text>
+<rect x="220" y="132.65833333333333" width="338.0567286354085" height="17.738888888888887" fill="#3f7d78"/>
+<text x="565.0567286354085" y="146.52777777777777" font-family="Arial" font-size="12">1.470</text>
+<text x="210" y="175.13888888888886" text-anchor="end" font-family="Arial" font-size="12">LOC4335529</text>
+<rect x="220" y="161.26944444444442" width="340.7994692839964" height="17.738888888888887" fill="#3f7d78"/>
+<text x="567.7994692839964" y="175.13888888888886" font-family="Arial" font-size="12">1.482</text>
+<text x="210" y="203.75" text-anchor="end" font-family="Arial" font-size="12">LOC9266983</text>
+<rect x="220" y="189.88055555555556" width="343.4281660679627" height="17.738888888888887" fill="#3f7d78"/>
+<text x="570.4281660679627" y="203.75" font-family="Arial" font-size="12">1.494</text>
+<text x="210" y="232.3611111111111" text-anchor="end" font-family="Arial" font-size="12">LOC4335043</text>
+<rect x="220" y="218.49166666666665" width="345.2353686296964" height="17.738888888888887" fill="#3f7d78"/>
+<text x="572.2353686296964" y="232.3611111111111" font-family="Arial" font-size="12">1.502</text>
+<text x="210" y="260.9722222222222" text-anchor="end" font-family="Arial" font-size="12">LOC4335562///LOC4335559</text>
+<rect x="220" y="247.10277777777776" width="346.15404396515976" height="17.738888888888887" fill="#3f7d78"/>
+<text x="573.1540439651598" y="260.9722222222222" font-family="Arial" font-size="12">1.506</text>
+<text x="210" y="289.58333333333337" text-anchor="end" font-family="Arial" font-size="12">LOC4341034</text>
+<rect x="220" y="275.7138888888889" width="354.9635969796808" height="17.738888888888887" fill="#3f7d78"/>
+<text x="581.9635969796808" y="289.58333333333337" font-family="Arial" font-size="12">1.544</text>
+<text x="210" y="318.1944444444445" text-anchor="end" font-family="Arial" font-size="12">LOC4351664</text>
+<rect x="220" y="304.32500000000005" width="362.8100218479387" height="17.738888888888887" fill="#3f7d78"/>
+<text x="589.8100218479387" y="318.1944444444445" font-family="Arial" font-size="12">1.578</text>
+<text x="210" y="346.8055555555556" text-anchor="end" font-family="Arial" font-size="12">LOC4342943</text>
+<rect x="220" y="332.93611111111113" width="368.26389849711035" height="17.738888888888887" fill="#3f7d78"/>
+<text x="595.2638984971104" y="346.8055555555556" font-family="Arial" font-size="12">1.602</text>
+<text x="210" y="375.4166666666667" text-anchor="end" font-family="Arial" font-size="12">LOC4328047</text>
+<rect x="220" y="361.5472222222222" width="372.5038672495743" height="17.738888888888887" fill="#3f7d78"/>
+<text x="599.5038672495743" y="375.4166666666667" font-family="Arial" font-size="12">1.620</text>
+<text x="210" y="404.0277777777778" text-anchor="end" font-family="Arial" font-size="12">LOC4332814</text>
+<rect x="220" y="390.15833333333336" width="399.3462287588939" height="17.738888888888887" fill="#3f7d78"/>
+<text x="626.3462287588939" y="404.0277777777778" font-family="Arial" font-size="12">1.737</text>
+<text x="210" y="432.6388888888889" text-anchor="end" font-family="Arial" font-size="12">LOC4340879</text>
+<rect x="220" y="418.76944444444445" width="420.6730849188815" height="17.738888888888887" fill="#3f7d78"/>
+<text x="647.6730849188815" y="432.6388888888889" font-family="Arial" font-size="12">1.830</text>
+<text x="210" y="461.25000000000006" text-anchor="end" font-family="Arial" font-size="12">LOC4335562</text>
+<rect x="220" y="447.3805555555556" width="438.7084318430491" height="17.738888888888887" fill="#3f7d78"/>
+<text x="665.7084318430491" y="461.25000000000006" font-family="Arial" font-size="12">1.908</text>
+<text x="210" y="489.86111111111114" text-anchor="end" font-family="Arial" font-size="12">LOC4352160</text>
+<rect x="220" y="475.9916666666667" width="487.36056244386526" height="17.738888888888887" fill="#3f7d78"/>
+<text x="714.3605624438653" y="489.86111111111114" font-family="Arial" font-size="12">2.120</text>
+<text x="210" y="518.4722222222223" text-anchor="end" font-family="Arial" font-size="12">LOC4329812</text>
+<rect x="220" y="504.6027777777778" width="523.320033126589" height="17.738888888888887" fill="#3f7d78"/>
+<text x="750.320033126589" y="518.4722222222223" font-family="Arial" font-size="12">2.276</text>
+<text x="210" y="547.0833333333334" text-anchor="end" font-family="Arial" font-size="12">LOC4335562</text>
+<rect x="220" y="533.213888888889" width="564.7093618581868" height="17.738888888888887" fill="#3f7d78"/>
+<text x="791.7093618581868" y="547.0833333333334" font-family="Arial" font-size="12">2.456</text>
+<text x="210" y="575.6944444444445" text-anchor="end" font-family="Arial" font-size="12">LOC4329464</text>
+<rect x="220" y="561.825" width="630.0" height="17.738888888888887" fill="#3f7d78"/>
+<text x="857.0" y="575.6944444444445" font-family="Arial" font-size="12">2.740</text>
+</svg>
