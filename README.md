@@ -32,11 +32,3 @@ The notebook performs the analysis. This static website displays its outputs and
 ## Preview
 
 Open `index.html` in a browser. No server or package installation is required.
-
-## Publish or Update
-
-To publish with GitHub Pages, create a GitHub repository, copy the contents of this folder into the repository root, push the files to the default branch, and enable **Settings → Pages → Deploy from a branch**. Select the default branch and `/ (root)`.
-
-For an existing deployment, upload the updated files to the same repository root and preserve the `assets/`, `figures/` and `downloads/` folder names. Paths and filenames are case-sensitive on GitHub Pages. Wait for the Pages deployment to finish, then reload the website.
-
-For this update, replace `index.html`, `styles.css` and `README.md`, add `assets/oryzagen-logo-white.png`, and ensure `downloads/OryzaGen.pdf` is present. Keep `app.js`, the figure files and result downloads in place. Upload the extracted website files, rather than the ZIP itself. The Word website guide is a separate supporting document and is not needed to run the website.
