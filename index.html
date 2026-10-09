@@ -5,34 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="OryzaGen: an integrative computational framework for prioritizing rice salinity-tolerance candidate genes.">
   <title>OryzaGen | Rice Salinity Gene Prioritization</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/oryzagen-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="OryzaGen home"><span class="brand-mark">O</span><span>OryzaGen</span></a>
+    <a class="brand" href="#top" aria-label="OryzaGen home"><img class="brand-logo" src="assets/oryzagen-logo.jpg" alt="" width="52" height="52"><span>OryzaGen</span></a>
     <nav aria-label="Primary navigation">
-      <a href="#evidence">Evidence</a><a href="#models">Models</a><a href="#candidates">Candidates</a><a href="#downloads">Downloads</a>
+      <a href="#about">About</a><a href="#evidence">Evidence</a><a href="#models">Models</a><a href="#candidates">Candidates</a><a href="#roadmap">Roadmap</a><a href="#downloads">Downloads</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero wrap">
-      <div class="hero-copy">
+    <section class="hero">
+      <div class="hero-copy wrap">
         <p class="eyebrow">Rice salinity tolerance · computational prototype</p>
-        <h1>From stress response to candidate genes.</h1>
+        <h1>OryzaGen</h1>
+        <p class="hero-subtitle">Candidate gene discovery for rice salinity tolerance</p>
         <p class="lede">OryzaGen integrates salinity-responsive expression, published GWAS loci, and population-blocked machine learning to prioritize genes for follow-up in <em>Oryza sativa</em>.</p>
-        <div class="hero-actions"><a class="button primary" href="#candidates">Explore candidates</a><a class="button secondary" href="#method">Read the method</a></div>
-      </div>
-      <div class="hero-panel" aria-label="Pipeline summary">
-        <div class="panel-label">Evidence flow</div>
-        <div class="flow"><span>Expression</span><b>+</b><span>GWAS</span><b>+</b><span>ML</span><i>→</i><strong>Prioritized genes</strong></div>
-        <p>Evidence is combined transparently; the dashboard does not claim experimental validation.</p>
+        <div class="hero-actions"><a class="button primary" href="#candidates">Explore candidates</a><a class="button secondary" href="#about">Discover the project</a></div>
       </div>
     </section>
 
     <section class="metrics wrap" aria-label="Project summary metrics">
       <div><strong>478</strong><span>matched accessions</span></div><div><strong>28</strong><span>expression-GWAS overlaps</span></div><div><strong>293</strong><span>extreme-class ML samples</span></div><div><strong>0.584</strong><span>best blocked ROC-AUC</span></div>
+    </section>
+
+    <section id="about" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">Research vision</p><h2>Turning genomic evidence into research priorities</h2><p>OryzaGen is an independent computational research project connecting rice gene-expression responses, published salinity-associated genomic regions and machine learning evidence.</p></div>
+      <div class="project-grid">
+        <article><h3>The challenge</h3><p>Rice salinity research produces expression measurements, genetic variants and trait observations in separate datasets. Bringing these sources together can help researchers decide which genes deserve further study.</p><p>The pitch deck places this work within a broader vision of climate-resilient agriculture. The current analysis focuses on salt stress in rice; it does not directly measure climate-change effects.</p></article>
+        <article><h3>The research aim</h3><p>Develop a reproducible framework that organizes these complementary signals into a transparent candidate-gene priority list. This can support the selection of targets for laboratory studies and future breeding research.</p><p>Computational ranking is an early discovery step. Gene function, crop performance and breeding value require experimental and field evaluation.</p></article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section method-band">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Research workflow</p><h2>From input data to interpretable outputs</h2><p>The analysis runs in the research notebook. This public dashboard presents selected results, figures and downloadable tables.</p></div>
+        <ol class="workflow-list">
+          <li><h3>Prepare the data</h3><p>Clean the supplied GEO expression data, examine the PLINK genotype panel and align public salinity phenotypes with accession metadata. Quality control and exploratory plots provide the context for interpretation.</p></li>
+          <li><h3>Integrate the evidence</h3><p>Rank saline-versus-control expression changes and cross-reference gene coordinates with published salinity GWAS loci using a ±100 kb window. Compare machine learning models under population-blocked validation to assess prediction across population groups.</p></li>
+          <li><h3>Review the candidates</h3><p>Combine the expression ranking, nearby published GWAS support and available SNP-neighborhood evidence in a candidate priority table. Inspect genomic coordinates, model metrics and figures before selecting genes for biological follow-up.</p></li>
+        </ol>
+      </div>
     </section>
 
     <section id="evidence" class="section wrap"><div class="section-heading"><p class="eyebrow">01 · Evidence</p><h2>Three complementary signals</h2><p>The strongest result is convergence: genes that respond to salinity and lie near independently published salinity GWAS loci receive higher priority.</p></div>
@@ -48,9 +63,34 @@
       <div class="table-wrap"><table><thead><tr><th>Gene / identifier</th><th>Chr.</th><th>Expression change</th><th>Published GWAS</th><th>Evidence score</th></tr></thead><tbody id="candidate-rows"></tbody></table></div>
     </section>
 
-    <section id="method" class="section method-band"><div class="wrap method-grid"><div><p class="eyebrow">Method note</p><h2>Designed for transparent prioritization</h2></div><p>OryzaGen integrates salinity-responsive expression features, published salinity-associated GWAS coordinates using a ±100 kb genomic window, and population-blocked machine learning models to prioritize candidate genes for rice salinity tolerance. The modelling layer compares baseline, regularized logistic regression, random forest, XGBoost, LightGBM, and CatBoost approaches, with results interpreted as prioritization support rather than a final field-ready predictor.</p></div></section>
+    <section id="method" class="section method-band"><div class="wrap method-grid"><div><p class="eyebrow">Method note</p><h2>Designed for transparent prioritization</h2></div><div class="method-copy"><p>OryzaGen integrates salinity-responsive expression features, published salinity-associated GWAS coordinates using a ±100 kb genomic window, and population-blocked machine learning to prioritize candidate genes for rice salinity tolerance. The modelling layer compares baseline, regularized logistic regression, random forest, XGBoost, LightGBM and CatBoost approaches.</p><p>The prediction target is high versus low germination index under 60 mM NaCl among the selected extreme-class accessions. Expression effect sizes and GWAS proximity support prioritization; they do not establish statistically significant differential expression or causal gene function on their own.</p></div></div></section>
 
-    <section id="downloads" class="section wrap"><div class="section-heading"><p class="eyebrow">Downloads</p><h2>Project outputs</h2><p>Small, reviewable outputs are provided for readers. Raw genotype files are intentionally not bundled into this public page.</p></div><div class="download-grid"><a href="downloads/final_salinity_candidate_gene_priority.csv" download><span>CSV</span><strong>Final candidate-gene priority table</strong><small>Ranked expression, GWAS, and ML evidence</small></a><a href="downloads/salinity_boosting_model_metrics.csv" download><span>CSV</span><strong>Model metrics</strong><small>Blocked and stratified validation results</small></a><a href="downloads/REVISED_SALINITY_PIPELINE_REPORT.md" download><span>MD</span><strong>Pipeline report</strong><small>Methods, counts, and interpretation</small></a></div></section>
+    <section id="applications" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">Potential applications</p><h2>Supporting the next research decision</h2><p>The pitch deck describes potential uses across plant research, crop improvement and agricultural biotechnology.</p></div>
+      <div class="application-grid">
+        <article><h3>Plant genomics research</h3><p>Explore salt-response candidates, inspect the evidence behind each ranking and select genes for functional experiments.</p></article>
+        <article><h3>Breeding and biotechnology</h3><p>Provide an initial shortlist for marker-assisted selection or gene-editing research, subject to independent validation.</p></article>
+        <article><h3>Agricultural resilience</h3><p>Contribute an interpretable research resource for studying salinity tolerance, with wider food-security applications as a long-term aim.</p></article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap-band">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Development roadmap</p><h2>A research foundation with room to grow</h2><p>The completed analysis provides a starting point for the broader computational framework described in the pitch deck.</p></div>
+        <ol class="roadmap-list">
+          <li><p class="stage-label">Current prototype</p><h3>Integrated candidate prioritization</h3><p>Notebook-based expression analysis, published GWAS integration, population-blocked model comparison and a public results dashboard.</p></li>
+          <li><p class="stage-label">Planned development</p><h3>Interactive analysis and stronger validation</h3><p>Add researcher dataset uploads and backend processing, then assess reproducibility with independent data and biological validation. These analysis services are not available on this static dashboard.</p></li>
+          <li><p class="stage-label">Future research</p><h3>Deep learning and multi-crop expansion</h3><p>Investigate sequence-based Transformer or graph neural network models if suitable data become available. Explore extensions to wheat and maize after validating the rice workflow.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="researcher" class="section wrap researcher-layout">
+      <div><p class="eyebrow">Lead researcher</p><h2>Tarek Osama Mohamed Amin</h2><p>Independent computational research · YRI</p></div>
+      <div><p>Research focus: computational biology, rice genomics and machine learning for salinity-tolerance candidate prioritization.</p><p>The project welcomes research partnerships and institutional feedback. The pitch deck outlines its original vision and proposed extensions.</p><a class="button secondary" href="downloads/OryzaGen.pdf" target="_blank" rel="noopener">Read the pitch deck</a></div>
+    </section>
+
+    <section id="downloads" class="section wrap"><div class="section-heading"><p class="eyebrow">Downloads</p><h2>Project outputs</h2><p>Small, reviewable outputs are provided for readers. Raw genotype files are intentionally not bundled into this public page.</p></div><div class="download-grid"><a href="downloads/final_salinity_candidate_gene_priority.csv" download><span>CSV</span><strong>Final candidate-gene priority table</strong><small>Ranked expression, GWAS, and ML evidence</small></a><a href="downloads/salinity_boosting_model_metrics.csv" download><span>CSV</span><strong>Model metrics</strong><small>Blocked and stratified validation results</small></a><a href="downloads/REVISED_SALINITY_PIPELINE_REPORT.md" download><span>MD</span><strong>Pipeline report</strong><small>Methods, counts, and interpretation</small></a><a href="downloads/OryzaGen.pdf" download><span>PDF</span><strong>OryzaGen pitch deck</strong><small>Research vision, applications and future roadmap</small></a></div><p class="download-note">The pitch deck describes the original proposal. Current implementation and measured performance are described above; deep learning, cost savings and accelerated breeding timelines have not been demonstrated by this prototype.</p></section>
   </main>
   <footer><div class="wrap"><span>OryzaGen</span><span>Integrative rice salinity-tolerance analysis</span><span>Research prototype · in silico evidence</span></div></footer>
   <script src="app.js"></script>
