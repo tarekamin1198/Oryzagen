@@ -5,7 +5,7 @@ html{scroll-padding-top:110px}
 .topbar{min-height:76px;height:auto;gap:20px;padding-top:8px;padding-bottom:8px}
 .brand-logo{width:52px;height:52px;object-fit:cover;border-radius:50%;flex-shrink:0}
 .topbar nav{flex-wrap:wrap;gap:18px}
-.hero{display:block;min-height:0;padding-top:310px;padding-bottom:42px;text-align:center;background-color:#fff;background-image:url('assets/oryzagen-logo-white.png');background-repeat:no-repeat;background-position:center top;background-size:auto 310px}
+.hero{display:block;min-height:0;padding-top:310px;padding-bottom:42px;text-align:center;background-color:#fff;background-image:url('assets/OryzaGen_Logo_White.jpg');background-repeat:no-repeat;background-position:center top;background-size:auto 310px}
 .hero-copy{max-width:960px}
 .hero h1{font-size:54px;line-height:1.1;max-width:none;margin-bottom:10px}
 .hero-subtitle{font-size:23px;line-height:1.3;font-weight:650;margin:0 0 16px}
